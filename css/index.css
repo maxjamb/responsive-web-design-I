@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5 {
   }
   
   header{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
 	justify-content: space-between;
 	align-content: baseline;
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5 {
 
   nav {
 	width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display:flex;
     align-items: baseline;
 	
@@ -110,9 +110,10 @@ h1, h2, h3, h4, h5 {
 	/* border: 1px solid red; */
 	display: flex;
 	justify-content: center;
-	margin-bottom: 50px;
-	border-bottom: 1px solid black;
-	/* height: 400px; */
+	margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin: 0 1.5%;
+
   }
   
   .left-banner {
@@ -138,7 +139,9 @@ h1, h2, h3, h4, h5 {
   button {
 	width: 150px;
 	height: 30px;
-	font-size: 15px;
+    font-size: 15px;
+    box-shadow: 1px solid black;
+    
   }
   
   /* middle content*/
@@ -146,18 +149,19 @@ h1, h2, h3, h4, h5 {
   .features-about {
 	/* border: 1px solid red; */
 	display: flex;
-	margin: 10px auto;
 	font-size: 90%;
   }
   
   .features {
-	/* border: 1px solid green; */
-	margin: 5px;
+    /* border: 1px solid green; */
+    margin: 5px;
+	padding: 10px 0 10px 0;
   }
   
   .about {
 	/* border: 1px solid green; */
-	margin: 5px;
+    margin: 5px;
+    padding: 10px 0 10px 0;
   }
   
   .middle-img {
@@ -170,7 +174,7 @@ h1, h2, h3, h4, h5 {
 	border-bottom: 1px solid black;
 	display: flex;
 	font-size: 90%;
-	padding-bottom: 20px;
+    padding-bottom: 20px;
   }
   
   .services {
@@ -203,11 +207,46 @@ h1, h2, h3, h4, h5 {
 
 
 
-
   /* -------------------------------------------- */
 /* CSS Media Query for mobile view */
 
 @media(max-width: 500px){
+    .round-image{
+        display: none;
+    }
+
+    header{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    nav{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav a{
+        border: 1px solid gray;
+        width:100%;
+        margin: 0 auto;
+        padding: 3% 42% 3%;
+    }
+
+    header img{
+        padding: 3% 0;
+    }
+
+    .features-about{
+        display:flex;
+        flex-direction: column;
+
+    }
+
+    .services-product-vision{
+        display:flex;
+        flex-direction: column;
+    }
 
 }
 
@@ -219,10 +258,6 @@ h1, h2, h3, h4, h5 {
         display: none;
     }
 
-    header img{
-        order: -1;
-    }
-
     header{
         display:flex;
         flex-direction: column-reverse;
@@ -230,7 +265,6 @@ h1, h2, h3, h4, h5 {
 
     nav{
         display:flex;
-        /* text-align: center; */
         justify-content: space-between;
     }
 
