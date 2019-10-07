@@ -77,25 +77,34 @@ h1, h2, h3, h4, h5 {
 	max-width: 750px;
   }
   
-  nav {
-	width: 100%;
-	/* border: 1px solid red; */
-	display: flex;
+  header{
+    border: 1px solid blue;
+    display: flex;
 	justify-content: space-between;
 	align-content: baseline;
 	align-items: center;
   }
+
+  nav {
+	width: 100%;
+    border: 1px solid red;
+    display:flex;
+    align-items: baseline;
+	
+  }
   
   nav a {
+    /* border: 1px solid green; */
 	text-decoration: none;
-	color: grey;
-	/* margin-top: 10px; */
-	margin-left: 10px;
+    color: grey;
+    margin:10px;
   }
   
-  nav img {
+  header img {
 	/* border: 1px solid green; */
   }
+
+
   
   .banner {
 	/* border: 1px solid red; */
@@ -191,5 +200,41 @@ h1, h2, h3, h4, h5 {
   .copyright {
 	text-align: center;
   }
+
+
+
+
+  /* -------------------------------------------- */
+/* CSS Media Query for mobile view */
+
+@media(max-width: 500px){
+
+}
+
+  /* -------------------------------------------- */
+/* CSS Media Query for tablet view */
+
+@media(max-width: 800px){
+    .round-image{
+        display: none;
+    }
+
+    header img{
+        order: -1;
+    }
+
+    header{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    nav{
+        display:flex;
+        /* text-align: center; */
+        justify-content: space-between;
+    }
+
+}
+
 
 
